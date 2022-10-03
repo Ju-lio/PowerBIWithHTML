@@ -1,0 +1,59 @@
+Background = "
+
+<!DOCTYPE html>
+<html lang='pt-br'>
+<body>
+<div class='header'>
+    <h1>COMPRAS - GERAL</h1>
+</div>
+
+
+<style>
+    :root {
+        --headerSize: 60px;
+        --headerColor: #085D68;
+        --backgroundColor: #D0D2D3;
+    }
+    * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+        font-weight: 500;
+    }
+    body {
+        width: 100vw;
+        height: 100vh;
+        position: relative;
+        background-color: var(--backgroundColor);
+    }
+    .header {
+        position: fixed;
+        display: flex;
+        align-items: center;
+        top: 0;
+        right: 0;
+        left: 0;
+        padding-left: var(--headerSize);
+        height: var(--headerSize);
+        background-color: var(--headerColor);
+        
+    }
+    h1 {
+      font-family: 'Consolas','Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+      font-size: 40px;
+      color: white;
+      font-weight: bold;
+    }
+    .sidebar {
+        position: absolute;
+        top: 0;
+        z-index: 0;
+        background-color: var(--headerColor);
+        width: var(--headerSize);
+        height: 100%;
+    }
+</style>
+</body>
+</html>
+
+"

@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang='pt-br'>
+<head>
+   <meta charset='UTF-8'>
+   <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+   <meta name='viewport' content='width=device-width, initial-scale=1.0'>
+</head>
+<body>
+   <style>
+
+      * {
+         margin: 0;
+         padding: 0;
+         list-style: none;
+         font-size: inherit;
+         font-weight: bold;
+         color: white;
+         font-family: 'Segoe UI';
+         fill: white;
+      }
+
+      header {
+         position: fixed;
+         display: flex;
+         align-items: center;
+         left: 0;
+         right: 0;
+         top: 0;
+         background-color: #085D68;
+         height: 60px;
+      }
+
+      .menu {
+         display: flex;
+         align-items: center;  
+         margin: 0 5px;
+         height: 100%;
+      }
+      
+      .menu-item {
+         display: flex;
+         align-items: center;
+         justify-content: center;
+         background-color: rgba(255, 255, 255, 0.15);
+         margin: 0 5px;
+      }
+
+      h1 {
+         font-size: 40px;
+         display: flex;
+         align-items: center;
+         justify-content: center;
+      }
+
+      .menu-item h1 svg {
+         height: 45px;
+         width: 45px;
+         padding: 100% 8px;
+         opacity: 0.5;
+      }
+
+      .menu-item h2 svg {
+         width: 0;
+         transition-property: width;
+         transition-duration: 0.2s;
+      }
+
+      text {
+         font-size: 16pt;
+      }
+
+      tspan {
+         font-family: 'Courier New', Courier, monospace;
+      }
+
+      .menu-item:hover h2 svg {
+         width: 200px;
+         opacity: 1;
+      }
+
+      .logo-hpro {
+         background-color: transparent;
+         margin: 0 15px;
+      }
+
+      .menu-active svg {
+         opacity: 1;
+         color: white;
+      }
+   </style>
+   <header>
+      <li class='menu'>
+         <ul class='menu-item logo-hpro'>
+            HPRO
+         </ul>
+         <ul id='item-1' class='menu-item' onclick='clickMenu(1)'>
+            <h1>
+               <svg width='444' height='443' viewBox='0 0 444 443' fill='none' xmlns='http://www.w3.org/2000/svg'>
+                  <path d='M242 442V232H301V442H242Z'/>
+                  <path d='M132 442V149.5H192V442H132Z'/>
+                  <path d='M354 442.5V150H414V442.5H354Z'/>
+                  <path d='M20.5 442V232H79.5V442H20.5Z'/>
+                  <path d='M169.5 87.5L34 195.5L0 153.5L178.5 11L272.5 131.5L357 46.5L310 0H443.5V131.5L395.5 84.5L267 210L169.5 87.5Z' fill='#085D68'/>
+               </svg>
+            </h1>
+            <h2>
+               <svg>
+                  <text>
+                      <tspan x='50%' y='50%' dominant-baseline='middle' text-anchor='middle'>GERAL</tspan>
+                  </text>
+              </svg>
+            </h2>
+         </ul>
+         <ul id='item-2' class='menu-item' onclick='clickMenu(2)'>
+            <h1>
+               <svg width='492' height='540' viewBox='0 0 492 540' fill='none' xmlns='http://www.w3.org/2000/svg'>
+                  <path d='M186.807 291.974L1.93065 16.0665C-2.52126 9.42259 2.2405 0.5 10.2381 0.5H481.916C489.983 0.5 494.73 9.55899 490.139 16.1914L299.278 291.932C298.12 293.604 297.5 295.59 297.5 297.623V479.16C297.5 482.768 295.556 486.097 292.414 487.87L203.414 538.085C196.748 541.846 188.5 537.03 188.5 529.376V297.541C188.5 295.558 187.911 293.621 186.807 291.974Z' fill='#085D68'/>
+               </svg>
+            </h1>
+            <h2>Título menu 2</h2>
+         </ul>
+         <ul id='item-3' class='menu-item' onclick='clickMenu(3)'>
+            <h1>
+
+            </h1>
+            <h2>Título menu 3</h2>
+         </ul>
+         <ul id='item-4' class='menu-item' onclick='clickMenu(4)'>
+            <h1>
+
+            </h1>
+            <h2>Título menu 4</h2>
+         </ul>
+         <ul id='item-5' class='menu-item' onclick='clickMenu(5)'>
+            <h1>
+
+            </h1>
+            <h2>Título menu 5</h2>
+         </ul>
+      </li>
+   </header>
+   <script>
+      function clickMenu(idx) {
+         clear()
+         document.querySelector('#item-' + idx.toString()).classList.add('menu-active')
+      }
+      function clear() {
+         for (let i = 1; i <= 5; i++) {
+            document.querySelector('#item-' + i.toString()).classList.remove('menu-active')
+         }
+      }
+   </script>
+</body>
+</html>

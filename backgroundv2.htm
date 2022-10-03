@@ -1,0 +1,225 @@
+<!DOCTYPE html>
+<html lang='pt-br'>
+<head>
+   <meta charset='UTF-8'>
+   <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+   <meta name='viewport' content='width=device-width, initial-scale=1.0'>
+</head>
+<body>
+   <style>
+      
+      /* #### VARIAVEIS #### */
+      :root {
+         --color-header: #085D68;
+         --color-body: #EAEAEA;
+         --color-font: #EAEAEA;
+         --color-icon: #eaeaeac4;
+         --color-icon2: #eaeaea77;
+         --color-icon-background: #27707A;
+         --color-icon-background2: #eaeaea2a;
+
+         --font-family: 'Segoe UI';
+
+         --item-1-width: 100px;
+         --item-2-width: 380px;
+         --item-3-width: 100px;
+         --item-4-width: 100px;
+         --item-5-width: 100px;
+      }
+      /* >>>>>>>>>>>>>>>>>>>>> */
+
+      * {
+         margin: 0;
+         padding: 0;
+         list-style: none;
+         fill: var(--color-icon);
+      }
+
+      body {
+         position: relative;
+         background-color: var(--color-body);
+      }
+
+      .header-title{
+         position: absolute;
+         left: 0;
+         right: 0;
+         display: flex;
+         justify-content: center;
+         align-items: center;
+
+         font-family: var(--font-family);
+         font-size: 22pt;
+         font-weight: bold;
+
+         pointer-events: none;
+         
+      }
+
+      tspan {
+         fill: var(--color-font);
+      }
+
+      .menu {
+         position: fixed;
+         left: 0;
+         right: 0;
+         top: 0;
+         height: 60px;
+         background: var(--color-header);
+         display: flex;
+         align-items: center;
+      }
+
+      .item {
+         display: flex;
+         align-items: center;
+         z-index: 99;
+      }
+
+      .icon, .title, .logo-hpro {
+         display: flex;
+         align-items: center;
+      }
+
+      .icon {
+         height: 60px;
+      }
+
+      .icon svg {
+         margin-left: 15px;
+         width: 40px;
+         height: 100%;
+         padding: 0 10px;
+         background-color: var(--color-icon-background);
+      }
+
+      .title svg {
+         height: 60px;
+         background-color: var(--color-icon-background);
+         font-size: 16pt;
+         font-family: var(--font-family);
+         width: 0;
+         transition: width ease-in-out 0.2s;
+      }
+
+      .item:hover .title-1 svg {
+         width: var(--item-1-width);
+      }
+
+      .item:hover .title-2 svg {
+         width: var(--item-2-width);
+      }
+
+      .item:hover .title-3 svg {
+         width: var(--item-3-width);
+      }
+
+      .item:hover .title-4 svg {
+         width: var(--item-4-width);
+      }
+
+      .item:hover .title-5 svg {
+         width: var(--item-5-width);
+      }
+
+
+      .logo-hpro svg {
+         width: 50px;
+         height: 50px;
+         margin: 0 10px;
+      }
+
+   </style>
+
+   <ul class='menu'>
+      <div class='header-title'>
+         <svg>
+            <text>
+               <tspan x='50%' y='50%' dominant-baseline='middle' text-anchor='middle'>COMPRAS - GERAL</tspan>
+            </text>
+         </svg>
+      </div>
+
+      <li class='logo-hpro'>
+         <svg width='176' height='231' viewBox='0 0 176 231' fill='none' xmlns='http://www.w3.org/2000/svg'>
+            <path d='M123 36L166.329 2.48152C170.272 -0.569042 176 2.24164 176 7.22726V190.203C176 191.976 175.216 193.658 173.858 194.798L132.86 229.221C128.956 232.499 123.001 229.723 123.002 224.625L123.011 162C127.126 163.192 129.494 163.447 134 162V213L164 189.629V18.5L134 41.5V95C134 114.5 114 126 114 126C114 126 96.8517 138.5 95.1759 139.5C92.9885 134.053 87.6465 131.314 88 130.932C88 130.932 123 109 123 99.5V36Z' fill='black'/>
+            <path fill-rule='evenodd' clip-rule='evenodd' d='M80.5 160C89.0604 160 96 153.06 96 144.5C96 135.94 89.0604 129 80.5 129C71.9396 129 65 135.94 65 144.5C65 153.06 71.9396 160 80.5 160ZM80.5 151C84.0899 151 87 148.09 87 144.5C87 140.91 84.0899 138 80.5 138C76.9101 138 74 140.91 74 144.5C74 148.09 76.9101 151 80.5 151Z' fill='black'/>
+            <path fill-rule='evenodd' clip-rule='evenodd' d='M128.5 163C137.06 163 144 156.06 144 147.5C144 138.94 137.06 132 128.5 132C119.94 132 113 138.94 113 147.5C113 156.06 119.94 163 128.5 163ZM128.5 154C132.09 154 135 151.09 135 147.5C135 143.91 132.09 141 128.5 141C124.91 141 122 143.91 122 147.5C122 151.09 124.91 154 128.5 154Z' fill='black'/>
+            <path d='M53.5 195L10.1712 228.518C6.22782 231.569 0.5 228.758 0.5 223.773V40.7967C0.5 39.0238 1.28408 37.3417 2.64186 36.2016L43.64 1.77868C47.5442 -1.49934 53.4989 1.2768 53.4981 6.37463L53.4891 69C49.3741 67.8075 47.0058 67.5528 42.5 69V18L12.5 41.3711V212.5L42.5 189.5V136C42.5 116.5 62.5 105 62.5 105C62.5 105 79.6483 92.5 81.3241 91.5C83.6321 97.026 88.8718 99.7891 88.5 100.068C88.5 100.068 54.5 119 53.5 133V195Z' fill='black'/>
+            <path fill-rule='evenodd' clip-rule='evenodd' d='M96 71C87.4396 71 80.5 77.9396 80.5 86.5C80.5 95.0604 87.4396 102 96 102C104.56 102 111.5 95.0604 111.5 86.5C111.5 77.9396 104.56 71 96 71ZM96 80C92.4101 80 89.5 82.9101 89.5 86.5C89.5 90.0899 92.4101 93 96 93C99.5899 93 102.5 90.0899 102.5 86.5C102.5 82.9101 99.5899 80 96 80Z' fill='black'/>
+            <path fill-rule='evenodd' clip-rule='evenodd' d='M48 68C39.4396 68 32.5 74.9396 32.5 83.5C32.5 92.0604 39.4396 99 48 99C56.5604 99 63.5 92.0604 63.5 83.5C63.5 74.9396 56.5604 68 48 68ZM48 77C44.4101 77 41.5 79.9101 41.5 83.5C41.5 87.0899 44.4101 90 48 90C51.5899 90 54.5 87.0899 54.5 83.5C54.5 79.9101 51.5899 77 48 77Z' fill='black'/>
+         </svg>
+      </li>
+      <li id='item-1' class='item'>
+
+         <div class='icon'>
+            <svg width='444' height='443' viewBox='0 0 444 443' fill='' xmlns='http://www.w3.org/2000/svg'>
+               <path d='M242 442V232H301V442H242Z'/>
+               <path d='M132 442V149.5H192V442H132Z'/>
+               <path d='M354 442.5V150H414V442.5H354Z'/>
+               <path d='M20.5 442V232H79.5V442H20.5Z'/>
+               <path d='M169.5 87.5L34 195.5L0 153.5L178.5 11L272.5 131.5L357 46.5L310 0H443.5V131.5L395.5 84.5L267 210L169.5 87.5Z' fill=''/>
+            </svg>
+         </div>
+         <div class='title title-1'>
+            <svg>
+               <text>
+                   <tspan x='50%' y='50%' dominant-baseline='middle' text-anchor='middle'>GERAL</tspan>
+               </text>
+           </svg>
+         </div>
+      </li>
+      <li id='item-2' class='item'>
+
+         <div class='icon'>
+            <svg width='444' height='443' viewBox='0 0 444 443' fill='' xmlns='http://www.w3.org/2000/svg'>
+               <path d='M242 442V232H301V442H242Z'/>
+               <path d='M132 442V149.5H192V442H132Z'/>
+               <path d='M354 442.5V150H414V442.5H354Z'/>
+               <path d='M20.5 442V232H79.5V442H20.5Z'/>
+               <path d='M169.5 87.5L34 195.5L0 153.5L178.5 11L272.5 131.5L357 46.5L310 0H443.5V131.5L395.5 84.5L267 210L169.5 87.5Z' fill=''/>
+            </svg>
+         </div>
+
+         <div class='title title-2'>
+            <svg>
+               <text>
+                   <tspan x='50%' y='50%' dominant-baseline='middle' text-anchor='middle'>MARABRAS PREÇO MELHOR NGM FAZ</tspan>
+               </text>
+           </svg>
+         </div>
+      </li>
+      <li id='item-3' class='item'>
+
+         <div class='icon'>
+
+         </div>
+
+         <div class='title title-3'>
+
+         </div>
+      </li>
+      <li id='item-4' class='item'>
+
+         <div class='icon'>
+
+         </div>
+
+         <div class='title title-4'>
+
+         </div>
+      </li>
+      <li id='item-5' class='item'>
+
+         <div class='icon'>
+
+         </div>
+
+         <div class='title title-5'>
+
+         </div>
+      </li>
+   </ul>
+</body>
+</html>
